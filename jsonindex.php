@@ -66,7 +66,7 @@ echo "</pre>";
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>Administration Konfiguration</title>
+		<title>Administration Konfiguration.</title>
 		<!-- site style -->
         <link rel="stylesheet" href="media/admin.css">
         <link rel="stylesheet" href="js/datepicker/datepicker.min.css">
