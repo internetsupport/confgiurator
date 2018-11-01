@@ -1,0 +1,181 @@
+body {
+    /*width: auto;*/
+    /*height: auto;*/
+}
+/* main */
+#main {
+    display: inherit;
+}
+/* user */
+#adminNav {
+    float: left;
+    width: 380px;
+    /*min-height: 890px;*/
+    min-height: calc(100% - 81px);
+    padding: 20px;
+    color: #fff;
+    background-color: #6d6d7f;
+}
+#adminNav a {
+    color: #fff;
+    text-decoration: none;
+}
+#adminNav a:hover {
+    font-weight: bold;
+    background-color: inherit;
+}
+/* admin navigation */
+
+#adminNav li {
+    /*display: inline-block;*/
+    border: 0;
+    list-style: none;
+}
+#adminNav li.space {
+    height: 25px;
+    /*background-color: #afafb7;*/
+}
+#adminNav li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+    /*border-top: 1px solid #eee;*/
+    /*border-bottom: 1px solid #eee;*/
+    /*margin-bottom: -1px;*/
+    background-color: #7e7e8f;
+}
+#adminNav li a:hover {
+    font-weight: normal;
+	color: #2f2f37;
+    background-color: #eee;
+}
+#adminNav li.active a{
+    color: #2f2f37;
+    background-color: #eee;
+}
+#adminNav li.inactive {
+    display: block;
+    padding: 10px 20px;
+    color: #afafb7;
+    background-color: #727283;
+}
+
+.edit input {
+    min-width: 400px;
+}
+.edit input[type='checkbox'],
+.edit input[type='submit'],
+.edit input#code,
+.edit input#submitbutton {
+    min-width: inherit;
+}
+
+/* contract */
+table.standard td.partHead {
+    background-color: #ddd;
+}
+table.standard tr[data-project-content] .thead,
+table.standard tr[data-contract-content] .thead,
+table.standard tr[data-contractID-content] .thead {
+    padding-left: 50px;
+    background: #fff;
+}
+.js-markOnNew.active, .js-markOnEdit.active {
+    position: relative;
+    background-color: #f6a800;
+}
+.js-markOnNew.active::after,
+.js-markOnEdit.active::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid #f6a800;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+.js-markOnEdit.active::after {
+    right: auto;
+    left: 0;
+}
+.js-markOnNew.inactive, .js-markOnEdit.inactive {
+    opacity: 0.3;
+    transition: opacity 0.7s;
+}
+.js-markOnNew.inactive:hover, .js-markOnEdit.inactive:hover {
+    opacity: 1;
+}
+/* price-matrix */
+.priceMatrix {
+    width: 33%;
+    /*border: 1px solid grey;*/
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.priceMatrix th {
+    background-color: #ddd;
+}
+.priceMatrix td, .priceMatrix th {
+    border-bottom: 1px solid #ccc;
+}
+.priceMatrix td.contract {
+    background-color: #eee;
+}
+.priceMatrix td {
+    min-width: 20px;
+}
+
+/* series booking */
+fieldset, div.confirm {
+    max-width: 550px;
+}
+
+/* cashdesk */
+input[type="number"] {
+    width: 70px;
+}
+
+iframe{
+    width: 750px;
+    height: 900px;
+}
+
+.selected {
+  font-weight:bold;
+}
+
+#deletecheck, #deletecheck2{
+ display:none;
+}
+
+/* config */
+.configDates .configDate, .configDates .datetrigger {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 2px 5px;
+    margin: 0 4px 4px 0;
+    cursor: pointer;
+}
+.configDates .configDate.deleted {
+    text-decoration: line-through;
+    background-color: #f04444;
+}
+.configDates .configDate.added {
+    background-color: #9d9;
+}
+.configDates .configDate:hover, .configDates .configDate .fa-times:hover {
+    background-color: #f04444;
+    color: #fff;
+}
+.configDates .datetrigger:hover {
+    /*color: #9ddd99;*/
+    background-color: #9d9;
+}
+.configDates .hiddenDate {
+    width: 0;
+    opacity: 0;
+    margin-left: -4px;
+}
