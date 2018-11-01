@@ -1,5 +1,5 @@
 <?php
-// PHP Skripte von Jens Gippner, Internetsupport.de, März 2018 für TH
+// PHP Skripte von Jens Gippner, Internetsupport.de, November 2018 für TH
 $json_config_file = "config.json";
 
 class Misc_helper
