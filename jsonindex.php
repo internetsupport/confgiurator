@@ -60,6 +60,12 @@ echo "<pre>";
 var_dump($json_data_arr);
 echo "</pre>";
 
+
+
+
+
+
+// nur eine änderung für master:
 ?>
 <!DOCTYPE html>
 <html lang="de">
