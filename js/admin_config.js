@@ -1,4 +1,49 @@
 /** admin config **/
+$(function() {
+
+    $.ajax({
+     url: "json/rooms_config.json",
+     dataType: "json",
+     }).done(function(data) {
+       $.each(data, function(i, value){
+          $('#rooms').append($('<option>').text(value).attr('value', i));
+         });
+
+     }).fail(function() {
+        console.log('There was an error in jsonform.');
+        $("#msg").html("Fehler Daten!");
+  });
+    $.ajax({
+     url: "json/config.json",
+     dataType: "json",
+     }).done(function(data) {
+          $('#email_address').val(data.email_address);
+          $('#user_name').val(data.user_name);
+          $('#config_dates').val(data.closing_days_arr[0]);
+
+     }).fail(function() {
+        console.log('There was an error in jsonform.');
+        $("#msg").html("Fehler Daten!");
+  });
+
+
+ });
+
+/*
+$(function() {
+ // $("#getData").click(function() {
+
+     $.ajax({
+     url: "json/rooms_config.json",
+     dataType: "json",
+     success: function (data) {
+     alert("ja");
+      // Process your JSON data here
+
+     }
+     });
+});
+*/
 
 
 // datepicker
@@ -69,8 +114,9 @@ $('[data-toggle="datepickerConfigEveryYear"]').datepicker({
 var output_this_year = $('#configDatesThisYear .add');
 var hidden_this_year = $("input[name='closing_days_new");
 var this_year_new;
+var input_this_year;
 
-var input_this_year = $("input[name='closing_days").val();
+var input_this_year = $("input[name='closing_days']").val();
 var string_this_year = input_this_year.replace(/"/g, '');
 var dates_this_year = string_this_year.split(',');
 
