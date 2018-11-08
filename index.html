@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="js/datepicker/datepicker.min.css">
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src='js/datepicker/datepicker.min.js'></script>
-		<script src="js/admin_config.js"></script>
 	</head>
 	<body>
 		<div id="main">
@@ -17,8 +16,8 @@
 			<form action="jsonindex.php" id="sf" name="formsb"  method="post">
 	  			<fieldset>
 	  				<legend>Schließtage</legend>
-	  				<input type="hidden" id='closing_days' name="closing_days" value='1'>
-	  				<input type="hidden" id='closing_days_new' name="closing_days_new" value='2'>
+	  				<input type="hidden" name="closing_days" value=''>
+	  				<input type="hidden" name="closing_days_new" value="">
                     <input type="hidden" name="formdata" value="1">
 	  				<label for="closing_days">Kalenderdatum</label>
 	  				<div class="spaceBeforeSmall configDates js-thisYearDate" id="configDatesThisYear">
@@ -35,12 +34,12 @@
 
 	  			</fieldset>
 				<fieldset>
-	  				<legend>E-Mail</legend>
-	  				<label for="email_address">E-Mail-Adresse</label> <input type="email" class="floatRight" size="25" maxlength="100" name="email_address" value="" id="email_address">
+	  				<legend>E-Mail-Adresse</legend>
+	  				<label for="email_address">E-Mail</label> <input type="email" class="floatRight" size="25" maxlength="100" name="email_address" value="" id="email_address">
 
 	  			</fieldset>
 					<fieldset>
-	  				<legend>Nutzer</legend>
+	  				<legend>Name</legend>
 	  				<label for="user_name">Vor und Nachname</label> <input type="text" class="floatRight" size="25" maxlength="100" name="user_name" value="" id="user_name">
 	  	 	  			</fieldset>
 	  			<br>
@@ -54,6 +53,7 @@
 			</form>
 			<br>
 		</div>
-
+		<!-- site script -->
+		<script src="js/admin_config.js"></script>
 	</body>
 </html>
